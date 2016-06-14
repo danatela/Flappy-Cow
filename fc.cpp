@@ -3,12 +3,20 @@
 #include "cj.h"
 #include "cjUI.h"
 #include "cjSFML.h"
+#include "gameApp.h"
 
 using namespace cj;
 
+#pragma comment(lib, "cjCore.lib")
+#pragma comment(lib, "cjUI.lib")
+#pragma comment(lib, "cjSFML.lib")
+
 int main()
 {
-	RenderWindow *window = new RenderWindow(nullptr, 960, 640, "Flappy Cow");
+	application = new GameApp();
+	application->run();
+
+	getchar();
 
 	return 0;
 }
